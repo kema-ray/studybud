@@ -3,14 +3,14 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Topic(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=250)
 
     def __str__(self):
         return self.name
 class Room(models.Model):
     host= models.ForeignKey(User,on_delete=models.CASCADE,default='')
     topic= models.ForeignKey(Topic,on_delete=models.CASCADE,default='')
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=250)
     description = models.TextField(null=True,blank=True)
     # participants =
     updated = models.DateTimeField(auto_now=True)
