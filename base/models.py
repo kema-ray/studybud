@@ -8,8 +8,8 @@ class Topic(models.Model):
     def __str__(self):
         return self.name
 class Room(models.Model):
-    host= models.ForeignKey(User,on_delete=models.CASCADE,default='')
-    topic= models.ForeignKey(Topic,on_delete=models.CASCADE,default='')
+    host= models.ForeignKey(User,on_delete=models.SET_NULL,null = True)
+    topic= models.ForeignKey(Topic,on_delete=models.SET_NULL,null= True)
     name = models.CharField(max_length=250)
     description = models.TextField(null=True,blank=True)
     # participants =
