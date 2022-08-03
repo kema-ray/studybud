@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from .forms import *
 # Create your views here.
 # rooms = [
 #     {'id': 1, 'name': 'Lets learn python'}, #dictionary
@@ -18,6 +19,6 @@ def room(request,pk):
     return render(request,'base/room.html',context)
 
 def createRoom(request):
-
-    context = {}
+    form = RoomForm
+    context = {'form':form}
     return render(request,'base/room_form.html',context)
