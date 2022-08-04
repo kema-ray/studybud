@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyBud</title>
 </head>
+{% block styles %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% endblock %}
 <body>
     {% include 'navbar.html' %}
     {% block content %}
