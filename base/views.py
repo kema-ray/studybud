@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render
 from django.db.models import Q
+from django.contrib.auth.models import User
+from django.contrib import messages
 from .models import *
 from .forms import *
 # Create your views here.
@@ -10,6 +12,14 @@ from .forms import *
 # ]
 
 def loginPage(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+        except:
+            messages.error(request, 'User does not exist')
     context={}
     return render(request,'base/login_register.html',context)
 
