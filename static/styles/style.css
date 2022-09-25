@@ -591,6 +591,7 @@ a {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
+  align-self: start;
 }
 
 .topics-page a:hover {
