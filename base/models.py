@@ -11,7 +11,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True,null = True)
     bio = models.TextField(null = True)
 
-    avatar = CloudinaryField('image', default="https://as2.ftcdn.net/v2/jpg/03/49/49/79/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg")
+    avatar = CloudinaryField('image', default= "image")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
