@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,8 +45,16 @@ INSTALLED_APPS = [
     'base',
     'rest_framework',
     'corsheaders',
+    'cloudinary',
 
 ]
+
+# adding config
+cloudinary.config( 
+  cloud_name = "kema-ray", 
+  api_key = "833725492432298", 
+  api_secret = "yKG83dkRqJ8xtG0-r3ekbU10I98" 
+)
 
 AUTH_USER_MODEL = 'base.User'
 

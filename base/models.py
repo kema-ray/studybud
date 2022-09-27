@@ -1,6 +1,8 @@
-from unittest.util import _MAX_LENGTH
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -9,7 +11,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True,null = True)
     bio = models.TextField(null = True)
 
-    # avatar
+    avatar = CloudinaryField('image', default="https://as2.ftcdn.net/v2/jpg/03/49/49/79/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
