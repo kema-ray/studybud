@@ -70,11 +70,12 @@ a {
 }
 
 .btn {
+  position: relative;
   background-color: transparent;
   border: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
   padding: 1rem 2rem;
@@ -109,9 +110,15 @@ a {
 }
 
 .btn > svg {
-  fill: currentColor;
-  width: 1.6rem;
-  height: 1.6rem;
+  position: absolute;
+  margin-top: 3.5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  /* fill: currentColor; */
 }
 
 .btn--pill {
@@ -295,7 +302,7 @@ a {
 
 .header__search > label {
   background-color: var(--color-dark-medium);
-  padding: 1.3rem 1rem;
+  padding: 0.75rem 0.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
