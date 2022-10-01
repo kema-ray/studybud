@@ -21,14 +21,17 @@
             {% if request.user.is_authenticated %}
         <div class="header__user">
           <a href="{% url 'update-user' %}">
-            <div class="avatar avatar--medium active">
-              <img src="{{request.user.avatar.url}}" />
+            <div style="padding-right: 1px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="height: 40px; width: 40px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <!-- <img src="{{request.user.avatar.url}}" /> -->
             </div>
             <p>{{request.user.username}}<span>@{{request.user.username}}</span></p>
           </a>
           <button class="dropdown-button">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <title>chevron-down</title>
+              <!-- <title>chevron-down</title> -->
               <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
             </svg>
           </button>
