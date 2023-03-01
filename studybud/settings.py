@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'cloudinary',
+    'corsheaders',
 
 ]
 
@@ -72,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'studybud.urls'
@@ -94,6 +96,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'studybud.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://*.domain.name']
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
