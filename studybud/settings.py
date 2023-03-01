@@ -75,6 +75,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-47197.up.railway.app/']
+
 ROOT_URLCONF = 'studybud.urls'
 
 TEMPLATES = [
@@ -94,8 +96,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'studybud.wsgi.application'
-
-CSRF_TRUSTED_ORIGINS = ['https://*.domain.name']
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
