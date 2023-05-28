@@ -75,7 +75,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-47197.up.railway.app/']
+# CSRF_TRUSTED_ORIGINS = ['https://web-production-47197.up.railway.app/']
 
 ROOT_URLCONF = 'studybud.urls'
 
@@ -109,13 +109,18 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'qUKimuAYH9i6Fg3f6pS1',
-        'HOST':'containers-us-west-117.railway.app',
-        'PORT': '5592',
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD':config('DB_PASSWORD'),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'railway',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'qUKimuAYH9i6Fg3f6pS1',
+    #     'HOST':'containers-us-west-117.railway.app',
+    #     'PORT': '5592',
     }
 }
 
