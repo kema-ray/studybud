@@ -100,29 +100,29 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD')
-#     }
-# }
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
-        'PASSWORD':config('DB_PASSWORD'),
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'railway',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'qUKimuAYH9i6Fg3f6pS1',
-    #     'HOST':'containers-us-west-117.railway.app',
-    #     'PORT': '5592',
+        'PASSWORD': config('DB_PASSWORD')
     }
 }
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD':config('DB_PASSWORD'),
+#     # 'default': {
+#     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     #     'NAME': 'railway',
+#     #     'USER': 'postgres',
+#     #     'PASSWORD': 'qUKimuAYH9i6Fg3f6pS1',
+#     #     'HOST':'containers-us-west-117.railway.app',
+#     #     'PORT': '5592',
+#     }
+# }
 
 
 # Password validation
