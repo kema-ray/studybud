@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-40o+#10%r(2$6b4!08*^o2r%uu5e5z1gte^b&#mtuxaxdv9yf5
 DEBUG = config('DEBUG', default=False, cast=bool)
 DEBUG=True
 
-ALLOWED_HOSTS = ['web-production-47197.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 # Application definition
 
